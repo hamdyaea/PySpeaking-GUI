@@ -12,7 +12,7 @@ def language():
     global lang
 
     msg = "What's the language do you want to make PySpeaking speak ?"
-    title = "Ice Cream Survey"
+    title = "PySpeaking-GUI"
     choices = ["English", "French", "German", "Spanish","Japanese","Chinese","Italian","Arabic", "Russian"]
     choice = choicebox(msg, title, choices)
 
