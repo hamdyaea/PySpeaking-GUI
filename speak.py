@@ -54,11 +54,12 @@ def textToSpeak():
     fieldNames = ["Text to speak"]
     fieldValues = []
     fieldValues = multenterbox(msg, title, fieldNames)
+    fieldValues[0]
     speak()
 
 def speak():
     global lang, fieldValues
-    textValue = "google_speech -l" +str(lang) +str(" \'\"")+str(fieldValues[0])+str("\"\'")
+    textValue = "google_speech -l" +str(lang) +str(" \'\"")+str(fieldValues[0].replace("'", ""))+str("\"\'")
     os.system(textValue)
 
 language()
