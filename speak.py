@@ -49,7 +49,7 @@ def language():
 def textToSpeak():
     global fieldValues
 
-    msg = "Enter the text to speak\n\nDon't use" +str(" \' ")+str(" write it like this : je tinvite chez moi, not je t\'invite chez moi ")
+    msg = "Enter the text to speak"
     title = "Enter the text to speak"
     fieldNames = ["Text to speak"]
     fieldValues = []
