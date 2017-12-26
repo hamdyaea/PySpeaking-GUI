@@ -59,7 +59,8 @@ def textToSpeak():
 
 def speak():
     global lang, fieldValues
-    textValue = "google_speech -l" +str(lang) +str(" \'\"")+str(fieldValues[0].replace("'", ""))+str("\"\'")
+
+    textValue = "google_speech -l" +str(lang) +str(" \"")+str(fieldValues[0].replace("'","\'"))+str("\"")
     os.system(textValue)
 
 language()
