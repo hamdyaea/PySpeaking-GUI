@@ -1,49 +1,30 @@
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)  
+# PySpeaking
 
-# PySpeaking-GUI
+A lightweight text-to-speech desktop application for Linux, written in Python 3 with Tkinter.
 
-## What's this software ?  
+**Developer:** Hamdy Abou El Anein
+**Contact:** info@daylightlinux.ch
+**License:** GNU GPL v3 (see LICENSE).
 
-This software use the google_speech api to read and then speak a sentence in the language that you select.   
+## Features
 
-![Screenshot](screenshot.png)    
-![Screenshot](screenshot1.png)    
+- Tkinter interface with nine selectable languages, replacing EasyGUI.
+- Local espeak-ng support, with optional google_speech fallback.
+- User text passed directly as a subprocess argument, never through a shell.
+- Non-blocking GUI playback and a simple command-line mode.
 
-## What you need to make it work :  
+## Requirements
 
+Python 3.10+, Tkinter, and espeak-ng (recommended) or google_speech.
 
-Install google_speech :  
+## Run
 
-https://pypi.python.org/pypi/google_speech/
+    python3 speak.py
 
-```sh
-python3 -m pip install google_speech
-```
-Install dependances :
+    python3 speak.py --text "Hello world" --language en
 
-```sh
-sudo apt-get install sox libsox-fmt-mp3
-```
+## Test
 
-This software is made for Python 3.  
+    python3 -m unittest discover -s tests -v
 
-Install all the packages for : Python 3.  
-
-easygui at least version 0.98  
-
-```sh
-sudo python3 -m pip install --upgrade easygui  
-```  
-
-
-## How to launch this game :  
-
-```sh
-python3 speak.py
-```  
-
-
-## Developer - Author  
-
-Hamdy Abou El Anein  
-
+Original source: [old branch](https://github.com/hamdyaea/PySpeaking-GUI/tree/old).
